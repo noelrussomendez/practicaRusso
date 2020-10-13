@@ -1,32 +1,37 @@
-let mensaje= "Bienvenidos a mi sitio!";
-alert(mensaje);
+//bienvenida//
 
-let avanzar = confirm ("¿Queres avanzar?");
-let siguiente = document.querySelector(".siguiente");
-if (avanzar == false) {
-siguiente.innerHTML = "Lamentamos que no quieras continuar tu visita por este sitio increíble."
-} else if (avanzar == true) {
-    siguiente.innerHTML = "¡Qué alegría que quieras seguir con tu visita por este maravilloso sitio!"
+alert ("¡Bienvenidos a mi sitio!");
+
+//continuar//
+
+let confirmacion = confirm ("¿Esta seguro que desea continuar?");
+termina = document.querySelector(".siguiente");
+if (confirmacion == false) {termina.innerHTML = "Lamentamos que no querias continuar tu visita por este sitio increible."}
+
+else if (confirmacion == true) {termina.innerHTML = "¡Qué alegría que quieras seguir con tu visita por este maravilloso sitio!";
+
+//nombre//
+
+nombre = prompt ("Ingrese su nombre de usuario");  
+console.log(nombre);
+saludo = document.querySelector(".ingresado");
+saludo.innerHTML = "Bienvendido " + nombre;
+
+//edad//
+
+edad = prompt("Porfavor, ingrese su edad");
+ if (edad>= 18){acceso= alert("Permitido su acceso");oscuro = confirm ("¿Desea utilizar el modo oscuro?")
+cuerpo = document.querySelector(".mode");}
+else if (edad <18){acceso= alert("Prohibido continuar");
+termina.style.color="white"; saludo.style.color="white";
 }
+if (oscuro == true) {cuerpo.style.backgroundColor = "dimgray"; cuerpo.style.color = "white";}
+ 
 
-let nombre = prompt ("Ingresa tu nombre");
-let saludar = document.querySelector(".ingresado");
-saludar.innerHTML = "Bienvenido " + nombre;
 
-let edad = prompt ("Ingrese su edad");
-if (edad < 18){
-    ingreso= alert("Phohibido continuar")
-} else if (edad > 18){
-    ingreso= alert("Puedes continuar navegando en el sitio");let oscuro = confirm("Desea ultilizar el modo oscuro?");
+//dia de semana//
 
-    let modo = document.querySelector(".mode");
-if (oscuro == true){
-    modo.style.backgroundColor = "dimgrey"; mode.style.backgroundColor = "white";
+diaDeSemana = ("Domingo")
+if (diaDeSemana = "Domingo"){alert("¡Hoy es día de descanso!")} 
 }
-}
-let diaDeSemana = ("Domingo");
-if (diaDeSemana == "Domingo"){
-    alert("Hoy es dia de descanso!");
-}
-
 
